@@ -70,3 +70,7 @@ gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'therubyracer'
 gem 'mini_magick'
+
+group :production do
+  gem 'rails_12factor'
+end
