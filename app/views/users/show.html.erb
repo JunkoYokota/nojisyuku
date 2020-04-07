@@ -1,0 +1,27 @@
+<div class="contents row">
+  <a href="/tweets/new">ブログを書く</a>
+  <p><%= @user.store_name %>さんの登録状況</p>
+  <ul>
+    <li>所在地<%= @user.zip_cord %> <%= @user.loc %></li>
+    <li>TEL<%= @user.phone %></li>
+    <li><%= @user.email %></li>
+    <li><%= @user.hp_url %></li>
+    <li>出前・持ち帰り<%= @user.delivery %></li>
+  </ul>
+  <ul>営業日
+    <li><%= @user.mon_hol %></li>
+    <li><%= @user.tue_hol %></li>
+    <li><%= @user.remarks %></li>
+  </ul>
+  
+  
+  <% @tweets.each do |tweet| %>
+    <ul>
+    <li><%= tweet.user.store_name %></li>
+    <li><%= tweet.image %></li>
+    <li><%= tweet.text %></li>
+  </ul>
+  <% end %>
+  
+  <%= paginate(@tweets) %>
+</div>

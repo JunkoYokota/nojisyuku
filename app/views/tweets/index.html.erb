@@ -1,0 +1,13 @@
+<p>自粛じゃ死ぬ！なんとか助けて下さい！！</p>
+
+<% @tweets.each do |tweet| %>
+  <ul>
+    <li>店名：<%= tweet.user.store_name %></li>
+    <li><%= tweet.image %></li>
+    <li><%= tweet.text %></li>
+  </ul>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% end %>
