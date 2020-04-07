@@ -1,5 +1,5 @@
 <div class="contents row">
-  <a href="/tweets/new">ブログを書く</a>
+  <a href="/tweets/new">近況を投稿をする</a>
   <p><%= @user.store_name %>さんの登録状況</p>
   <ul>
     <li>所在地<%= @user.zip_cord %> <%= @user.loc %></li>
@@ -24,7 +24,7 @@
     <li>営業時間：<%= @user.start_time %> 〜 <%= @user.end_time %></li>
   </ul>
   
-  
+  p><%= @user.store_name %>さんの投稿</p>
   <% @tweets.each do |tweet| %>
     <ul>
     <li><%= tweet.user.store_name %></li>
