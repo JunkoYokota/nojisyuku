@@ -20,6 +20,10 @@
     <li>備考<%= @user.remarks %></li>
   </ul>
   
+  <ul>
+    <li>営業時間：<%= @user.start_time %> 〜 <%= @user.end_time %></li>
+  </ul>
+  
   
   <% @tweets.each do |tweet| %>
     <ul>
