@@ -3,15 +3,21 @@
   <p><%= @user.store_name %>さんの登録状況</p>
   <ul>
     <li>所在地<%= @user.zip_cord %> <%= @user.loc %></li>
-    <li>TEL<%= @user.phone %></li>
-    <li><%= @user.email %></li>
-    <li><%= @user.hp_url %></li>
+    <li>TEL番号<%= @user.phone %></li>
+    <li>メール<%= @user.email %></li>
+    <li>ホームページ<%= @user.hp_url %></li>
     <li>出前・持ち帰り<%= @user.delivery %></li>
   </ul>
   <ul>営業日
-    <li><%= @user.mon_hol %></li>
-    <li><%= @user.tue_hol %></li>
-    <li><%= @user.remarks %></li>
+    <li>月<%= @user.mon_hol %></li>
+    <li>火<%= @user.tue_hol %></li>
+    <li>水<%= @user.tue_hol %></li>
+    <li>木<%= @user.wed_hol %></li>
+    <li>金<%= @user.thu_hol %></li>
+    <li>土<%= @user.sat_hol %></li>
+    <li>日<%= @user.sun_hol %></li>
+    <li>祝<%= @user.hol_hol %></li>
+    <li>備考<%= @user.remarks %></li>
   </ul>
   
   
