@@ -1,6 +1,10 @@
 class ChangeDataDeliveryToUsers < ActiveRecord::Migration[5.2]
-  def change
-    change_column :users, :take_out, :string
-    change_column :users, :delivery, :string
-  end
+  reversible do |dir|
+      change_table :users do |t|
+        dir.up   { t.change :take_out, :string }
+        dir.down { t.change :take_out, :boolean }
+        dir.up   { t.change :delivery, :string }
+        dir.down { t.change :delivery, :boolean }
+      end
+    end
 end
