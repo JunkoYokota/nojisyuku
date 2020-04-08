@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_101824) do
+ActiveRecord::Schema.define(version: 2020_04_08_085344) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -22,29 +22,31 @@ ActiveRecord::Schema.define(version: 2020_04_07_101824) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "store_name"
+    t.string "zip_cord"
+    t.text "loc"
+    t.string "phone"
     t.string "email", default: "", null: false
+    t.string "hp_url"
+    t.string "mon_hol"
+    t.string "tue_hol"
+    t.string "wed_hol"
+    t.string "thu_hol"
+    t.string "fri_hol"
+    t.string "sat_hol"
+    t.string "sun_hol"
+    t.string "hol_hol"
+    t.string "delivery"
+    t.string "take_out"
+    t.text "remarks"
+    t.time "start_time", default: "2000-01-01 00:00:00"
+    t.time "end_time", default: "2000-01-01 00:00:00"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "loc"
-    t.string "zip_cord"
-    t.string "phone"
-    t.string "hp_url"
-    t.boolean "delivery"
-    t.text "remarks"
-    t.boolean "mon_hol"
-    t.boolean "tue_hol"
-    t.boolean "wed_hol"
-    t.boolean "thu_hol"
-    t.boolean "fri_hol"
-    t.boolean "sat_hol"
-    t.boolean "sun_hol"
-    t.boolean "hol_hol"
-    t.time "start_time"
-    t.time "end_time"
+    t.string "pre_time", default: "-"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

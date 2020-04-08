@@ -70,6 +70,7 @@ gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'therubyracer'
 gem 'mini_magick'
+gem 'jquery-rails'
 
 group :production do
   gem 'rails_12factor'
