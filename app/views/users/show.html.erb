@@ -28,8 +28,9 @@
     <% end %>
 
   </ul>
-  
-  <%= @user.store_name %>さんの投稿</p>
+  <%= link_to "登録情報の変更はこちら", "/users/#{current_user.id}/edit", method: :get %>
+
+  <p><%= @user.store_name %>さんの投稿</p>
   <% @tweets.each do |tweet| %>
     <ul>
     <li><%= tweet.user.store_name %></li>
@@ -37,6 +38,7 @@
     <li><%= tweet.text %></li>
   </ul>
   <% end %>
+
   
   <%= paginate(@tweets) %>
 </div>
