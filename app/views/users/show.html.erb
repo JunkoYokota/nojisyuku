@@ -35,7 +35,7 @@
   <% @tweets.each do |tweet| %>
     <ul>
     <li><%= tweet.user.store_name %></li>
-    <li><%= tweet.image.to_s %></li>
+    <li><%= image_tag tweet.img.to_s %></li>
     <li><%= tweet.text %></li>
   </ul>
   <% end %>
