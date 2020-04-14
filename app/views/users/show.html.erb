@@ -1,6 +1,7 @@
 <div class="contents row">
   <a href="/tweets/new">近況を投稿をする</a>
   <p><%= @user.store_name %>さんの登録状況</p>
+  <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>)"></div>
   <ul>
     <li>所在地：<%= @user.zip_cord %> <%= @user.loc %></li>
     <li>TEL番号：<%= @user.phone %></li>
@@ -34,7 +35,7 @@
   <% @tweets.each do |tweet| %>
     <ul>
     <li><%= tweet.user.store_name %></li>
-    <li><%= tweet.image %></li>
+    <li><%= tweet.image.to_s %></li>
     <li><%= tweet.text %></li>
   </ul>
   <% end %>

@@ -69,9 +69,12 @@ gem 'devise'
 gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'therubyracer'
-gem 'mini_magick'
 gem 'jquery-rails'
+gem 'carrierwave'
 
 group :production do
   gem 'rails_12factor'
 end
+
+# Use ActiveStorage variant
+gem 'mini_magick'

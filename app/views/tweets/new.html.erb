@@ -1,12 +1,19 @@
 <div class="contents row">
   <div class="container">
-  <%= form_tag('/tweets', method: :post) do %>
+
     <h3>
       投稿する
     </h3>
-    <input type="text" name="image" placeholder="Image Url">
-    <textarea name="text" placeholder="text" rows="10" cols="30"></textarea>
-    <input type="submit" value="SEND">
-  <% end %>
+    <%= form_with(model: @tweet, local: true) do |form| %>
+    <%= form.label :text %>
+    <%= form.text_field :text %>
+    <div class="form-group file">
+      <%= form.file_field :img, id: :tweet_img %>
+      <p><%= form.check_box :remove_img %>画像を削除する</p>
+      </div>
+      <div class="form-group">
+        <%= form.submit "送信", class: "btn btn-primary withripple" %>
+      </div>
+<% end %>
   </div>
 </div>

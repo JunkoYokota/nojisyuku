@@ -9,9 +9,14 @@
 <% end %>
 
 <% @tweets.each do |tweet| %>
+
   <ul>
     <li>店名：<%= tweet.user.store_name %></li>
-    <li><%= tweet.image %></li>
+    <li><%= image_tag tweet.img.to_s %></li>
     <li><%= tweet.text %></li>
   </ul>
 <% end %>
+
+
+    
+
