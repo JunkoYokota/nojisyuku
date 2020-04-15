@@ -30,6 +30,7 @@
 
   </ul>
   <%= link_to "登録情報の変更はこちら", "/users/#{current_user.id}/edit", method: :get %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
   <p><%= @user.store_name %>さんの投稿</p>
   <% @tweets.each do |tweet| %>

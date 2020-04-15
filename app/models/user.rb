@@ -7,4 +7,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   has_many :tweets
+  
+  def full_profile?
+    image.attached?  && store_name?
+  end
+  
 end
