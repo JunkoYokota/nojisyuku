@@ -91,6 +91,11 @@
       </div>
       <h2>プロフィール画像</h2>
       <div class="form-group file">
+      <% if @user.image.attached? %>
+        <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>)"></div>
+      <% else %>
+        <div class="image"><%= image_tag "default_user.png" %></div>
+      <% end %>
         <%= form.file_field :image, class: "form-control floating-label", placeholder: "画像アップロード" %>
       </div>
       <div class="form-group">
