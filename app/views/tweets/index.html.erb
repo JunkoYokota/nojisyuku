@@ -12,7 +12,7 @@
 <% if user_signed_in? %>
   <% unless current_user.full_profile? %>
     <header class="header_top panel panel-default col-lg-12 no-profile">
-      <h2>基本プロフィールを登録しましょう！</h2>
+      <h2>まずは、あなたの基本プロフィールを登録しましょう！</h2>
       <%= link_to "プロフィールを登録する", edit_user_path(current_user), { class: "btn btn-lg btn-primary withripple" } %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     </header>
